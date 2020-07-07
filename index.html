@@ -1,1 +1,48 @@
-'hello world!'
+
+<!-- This is a comment in HTML -->
+
+<!-- To make any line a comment in VSCode, use cmd + / -->
+
+<!-- This is how you add a style sheet: -->
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- And this is how we tell the page to include our javascript file -->
+<script src = 'some-js-code.js'></script>
+
+
+
+<h1>
+    This is heading text.  "h1" is the biggest heading, "h2" is a subheading, "h3" is a sub-subheading etc
+</h1>
+
+
+<!-- "divs" are dividers and are a good way to organize your html code. -->
+<div>
+    <p>
+        This is normal text.  The p stands for paragraph
+    </p>
+
+
+    <!-- The following p html element has a "class" associated with it.  Find its style in the p.[classname] block in the css sheet -->
+    <p class = "ryan-favorite">
+        This paragraph element is part of the class "ryan-favorite", instructions for how this is styled can be configured in the css file
+    </p>
+</div>
+
+
+<div>
+    Sample Edit box: <input type="text" id="my-text-box" > </input>
+</div>
+
+<div>
+    <!-- Specify the "onClick" property of the button as a function, which is defined in your JS file -->
+    Sample Button: <button type="button" onclick="doThisWhenButtonIsClicked()">Click Me!</button>
+</div>
+
+<div>
+    <p id = "identifiable-paragraph">
+        Here is some text that we will programmatically edit
+    </p>
+</div>
