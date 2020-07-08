@@ -17,9 +17,14 @@
     This is heading text.  "h1" is the biggest heading, "h2" is a subheading, "h3" is a sub-subheading etc
 </h1>
 
+<h6>
+    This is a subheader
+</h6>
+
+
 
 <!-- "divs" are dividers and are a good way to organize your html code. -->
-<div>
+<div id="div-identifier" class="div-class">
     <p>
         This is normal text.  The p stands for paragraph
     </p>
@@ -38,7 +43,7 @@
 
 <div>
     <!-- Specify the "onClick" property of the button as a function, which is defined in your JS file -->
-    Sample Button: <button type="button" onclick="doThisWhenButtonIsClicked()">Click Me!</button>
+    Sample Button: <button  onclick="doThisWhenButtonIsClicked()">Click Me!</button>
 </div>
 
 <div>
@@ -46,3 +51,57 @@
         Here is some text that we will programmatically edit
     </p>
 </div>
+
+
+<!-- make material drop down  -->
+<label> 
+    Material 
+</label>
+
+<select id = 'select' name = 'select'>  
+    <option value = choose> Choose </option>
+</select>
+
+<script>
+    var select = document.getElementById('select');
+    
+    for(var i = 0; i < materialArray.length; i++) {
+        var option = document.createElement('option')
+            txt = document.createTextNode(materialArray[i]);
+        option.appendChild(txt);
+        select.insertBefore(option, select.lastChild);
+    }
+</script>
+
+<!-- make units drop down  -->
+<div>
+    <label> 
+        Units
+    </label>
+
+    <select id = 'units' name = 'units'>
+        <option value = radians> Radians </option>
+        <option value = degrees> Degrees </option>
+        <option value = waves> Waves </option>
+    </select>
+</div>
+
+<!-- phase shift edit box  -->
+<div>
+    <label> Phase Shift </label>
+    <input type = 'text' id = phaseShift name = phaseShift>
+</div>
+
+<!-- wavelength edit box  -->
+<div>
+    <label> Wavelength </label>
+    <input type = 'text' id = wavelength name = wavelength> 
+</div>
+
+<!-- thickness button  -->
+<div>
+    <button onclick = 'determineThickness()'> Thickness </button>
+</div>
+
+<!-- optimal thickness output  -->
+<input type = 'text' id = 'thickness'>

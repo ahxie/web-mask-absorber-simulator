@@ -1,9 +1,3 @@
-// This is a comment in JS
-
-/*
-    This is a block comment in JS
-*/
-
 var data = JSON.parse(`[
     {
       "Material": "Al",
@@ -37,28 +31,6 @@ var data = JSON.parse(`[
     }
   ]`)
 
-function doThisWhenButtonIsClicked(){
-    console.log('Clicked!')
-
-
-    // This is how you grab info from another html element using its id:
-    var textFieldValue = document.getElementById('my-text-box').value;
-    
- 
-    console.log('The value of the text box is: "' + textFieldValue + '"');
-
-   
-    var s3 = `my text field value is "${textFieldValue}"`;
-
-
-
-    console.log(s3)
-
-    // Change the value of the HTML inside the last paragraph:
-    document.getElementById('identifiable-paragraph').innerHTML = s3;
-
-}
-
 // make array of materials 
 
 var materialArray = [];
@@ -75,8 +47,6 @@ function determineThickness() {
     // find index of material in drop down 
     var dropdown = document.getElementById('select').value;
     var index = materialArray.indexOf(dropdown);
-    console.log(dropdown);
-    console.log(index);
 
     // find corresponding delta 
     var delta = data[index].Delta;
@@ -115,6 +85,8 @@ function determineThickness() {
     document.getElementById('thickness').value = d;
 }
 
-// find corresponding beta 
-var beta = data[index].Beta;
 
+
+ 
+
+  
