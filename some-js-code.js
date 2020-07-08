@@ -85,16 +85,19 @@ function determineThickness() {
     var n2 = 1 + delta;
 
     // define phase shift variable
-    var phaseShift = document.getElementById('phaseShift').value;
+    let phaseShift = document.getElementById('phaseShift').value;
 
     // convert phase shift value to radians if needed (not working)
-    if (document.getElementById('units').value === 'Radians') {
-        phaseShift = document.getElementById('phaseShift').value;
-    }  else if (document.getElementById('units').value === 'Degrees') {
-        phaseShift = document.getElementById('phaseShift').value*Math.PI/180;
-    } else if (document.getElementById('units') === 'Waves') {
-        phaseShift = document.getElementById('phaseShift').value*2*Math.PI;
+    var units = document.getElementById('units').value;
+    if (units === 'Radians') {
+        phaseShift = phaseShift;
+    } else if (units === 'Degrees') {
+        phaseShift = phaseShift*Math.PI/180;
+    } else if (units === 'Waves') {
+        phaseShift = phaseShift*2*Math.PI;
     }
+
+    console.log(phaseShift);
 
     // compute optimal thickness 
     const n1 = 1;
@@ -115,6 +118,5 @@ function determineThickness() {
     document.getElementById('thickness').value = d;
 }
 
-// find corresponding beta 
-var beta = data[index].Beta;
+
 
