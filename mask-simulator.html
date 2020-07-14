@@ -6,20 +6,13 @@
     Material 
 </label>
 
-<select id = 'select' name = 'select'>  
-    <option value = choose> Choose </option>
+<select id = 'material-dropdown'>  
+   
 </select>
 
-<script>
-    var select = document.getElementById('select');
-    
-    for(var i = 0; i < materialArray.length; i++) {
-        var option = document.createElement('option')
-            txt = document.createTextNode(materialArray[i]);
-        option.appendChild(txt);
-        select.insertBefore(option, select.lastChild);
-    }
-</script>
+
+
+
 
 <!-- make units drop down  -->
 <div>
@@ -37,13 +30,13 @@
 <!-- phase shift edit box  -->
 <div>
     <label> Phase Shift </label>
-    <input type = 'text' id = phaseShift name = phaseShift>
+    <input type = 'text' id = phaseShift name = phaseShift value = "3.14">
 </div>
 
 <!-- wavelength edit box  -->
 <div>
     <label> Wavelength </label>
-    <input type = 'text' id = wavelength name = wavelength> 
+    <input type = 'text' id = wavelength name = wavelength value = "13.5"> 
 </div>
 
 <!-- thickness button  -->
